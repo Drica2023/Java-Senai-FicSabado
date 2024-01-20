@@ -21,6 +21,17 @@ public class Program {
 
 		System.out.println("Seu nome é : " + nome + "  email: " + email + "  idade: " + idade);
 
+			// && e ||
+
+		if (22 > 20 && 30 > 20 && 40 > 30) {
+			System.out.println("Entrou na condição &&");
+
+		}
+		if (22 > 20 || 30 > 40) {
+
+			System.out.println("Entrou na condição || (ou)");
+		}
+
 		scanner.close();
 
 	}
