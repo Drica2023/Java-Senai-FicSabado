@@ -79,47 +79,78 @@ public class EstruturaRepeticao {
 		System.out.println("Finalizou");
 
 		// do while
-		
-		Scanner sc = new Scanner (System.in);
-		
+
+		Scanner sc = new Scanner(System.in);
+
 		boolean sistema = true;
-		
-		String nome = "", email = "" , senha = "";
+
+		String nome = "", email = "", senha = "";
 		do {
 			System.out.println(" 1 - Criar Cliente");
 			System.out.println(" 2 - Ler o usuario");
+			System.out.println(" 3 - Deletar usuario");
+			System.out.println(" 4 - atualizar usuario");
 			System.out.println(" 9 - Sair do sistema");
 			int opcao = sc.nextInt();
-			
-	
-			
-			switch(opcao) {
-		
-			case 1 : {
-				
+
+			switch (opcao) {
+
+			case 1: {
+
 				System.out.println("Digite o nome: ");
 				nome = sc.next();
 				System.out.println("Digite o Email: ");
 				email = sc.next();
 				System.out.println("Digite o senha: ");
-				 senha = sc.next();
-				System.out.println("Usuario criado com sucesso:  " + nome + " " +  email + " " +  senha);
+				senha = sc.next();
+				System.out.println("Usuario criado com sucesso:  " + nome + " " + email + " " + senha);
 				continue;
 			}
-			case 2 : {
+			case 2: {
 				System.out.println("Esse é o usuario");
 				System.out.println("################");
-				System.out.println(nome + " " +  email + " " +  senha);
+				System.out.println(nome + " " + email + " " + senha);
 				System.out.println("################");
 				continue;
+			}
+
+			case 3: {
+				{
+
+					nome = "";
+					email = "";
+					senha = "";
+					System.out.println("Usuario deletado com sucesso");
+					continue;
+				}
+			}
+			case 4: {
+				{
+
+					System.out.println("Nome atual: " + nome);
+					System.out.println("Novo nome: ");
+					nome = sc.next();
+					System.out.println("Email atual: " + email);
+					System.out.println("Novo Email: ");
+					email = sc.next();
+					System.out.println("Senha atual: " + email);
+					System.out.println("Nova Senha: ");
+					senha = sc.next();
+					System.out.println("alterado com sucesso");
+					System.out.println(nome + " " + email + " " + senha);
+
+					continue;
+				}
+
 			}
 			case 9: {
 				sistema = false;
 			}
-			default:{}
+			default: {
 			}
-			
+			}
+
 		} while (sistema != false);
 		sc.close();
-	} 
+	}
 }
