@@ -1,7 +1,12 @@
 package montadora.models;
 
-public class Carro extends Veiculo {
+public class Carro extends Veiculo implements SuperPoderes {
 	private double tamanhoPortaMalas;
+	
+	@Override
+	public void voar() {
+				
+	}
 	
 	@Override
 	public void acelerar() {
