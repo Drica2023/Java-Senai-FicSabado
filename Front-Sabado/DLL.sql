@@ -1,0 +1,3 @@
+
+-- DLL - configuration Database
+ALTER TABLE USUARIO ADD COLUMN EMAIL VARCHAR(100);
