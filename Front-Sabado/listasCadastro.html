@@ -1,44 +1,216 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Lista de Cadastro</title>
-<title>Visualização dos Cadastrados</title>
+  <title>Cadastro de Usuarios</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Montserrat", sans-serif
+    }
+
+    .w3-row-padding img {
+      margin-bottom: 12px
+    }
+
+    .bgimg {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('./listaCadastro2.png');
+      min-height: 100%;
+    }
+	table {
+  width: 100%;
+}
+button {
+  position: relative;
+  background-color: #04AA6D;
+  border: none;
+  font-size: 10px;
+  color: #FFFFFF;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+  </style>
 </head>
+
 <body>
-	
-	
+
+  <!-- Sidebar with image -->
+  <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+    <div class="bgimg"></div>
+  </nav>
+
+  <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+  <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2"
+    id="mySidebar">
+    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright"
+      style="padding:0 12px;">
+      <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+      <a href="./index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+      <a href="./listasCadastro.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+        onclick="closeNav()">Lista de cadastro</a>
+      <a href="./Formulario.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+        onclick="closeNav()">Cadastrar-se</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="w3-main w3-padding-large" style="margin-left:40%">
+
+    <!-- Menu icon to open sidebar -->
+    <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;"
+      onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+    <!-- Header -->
+    <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+			
 	<h1> Lista de Cadastrado</h1>
 	
 	
 	 
-  <table border="1">
-	   <tr> 
-	   <th>ID</th>
-	   <th>Nome</th>
-	   <th>Email</th>
-       <th>Password</th>
-	   <th>Editar</th>
-	   <th>Excluir</th>
-	   </tr>	   
+	<table border="1">
+		 <tr> 
+		 <th>ID</th>
+		 <th>Nome</th>
+		 <th>Email</th>
+		 <th>Password</th>
+		 <th>Editar</th>
+		 <th>Excluir</th>
+		 </tr>	   
+		
+		 
 	  
-	   
-	
-	 <tr> 
-	   <td>000001</td>
-	   <td>Adriana Medeiros Rodrigues</td>
-	   <td>adriana@gmail.com</td>
-	   <td>$25484555%39</td>
-	   <td><button>Atualizar</button></td>
-	   <td><button>Excluir</button></td>
-	   </tr>
-       <a href="deleteusuario.jsp?id=${usuario.getId()}">
+	   <tr> 
+		 <td>000001</td>
+		 <td>Adriana Medeiros Rodrigues</td>
+		 <td>adriana@gmail.com</td>
+		 <td>$25484555%39</td>
+		 <td><button>Atualizar</button></td>
+		 <td><button>Excluir</button></td>
+		 </tr>
+		 <tr> 
+			<td>000002</td>
+			<td>Pedro Marinho da Silva</td>
+			<td>pedro@gmail.com</td>
+			<td>$5882484555%39</td>
+			<td><button>Atualizar</button></td>
+			<td><button>Excluir</button></td>
+			</tr> <tr> 
+				<td>000002</td>
+				<td>Heloisa Cardoso</td>
+				<td>heloisa@gmail.com</td>
+				<td>$5882484555%39</td>
+				<td><button>Atualizar</button></td>
+				<td><button>Excluir</button></td>
+				</tr> <tr> 
+					<td>000003</td>
+					<td>Jose Mario Amaral</td>
+					<td>josem@gmail.com</td>
+					<td>$5882484555%39</td>
+					<td><button>Atualizar</button></td>
+					<td><button>Excluir</button></td>
+					</tr> <tr> 
+						<td>000004</td>
+						<td>Joe Marinho de Oliveira</td>
+						<td>jmarinho@gmail.com</td>
+						<td>$5882484555%39</td>
+						<td><button>Atualizar</button></td>
+						<td><button>Excluir</button></td>
+						</tr> <tr> 
+							<td>000005</td>
+							<td>Almir Castro da Santos</td>
+							<td>almircsantos@gmail.com</td>
+							<td>$5882484555%39</td>
+							<td><button>Atualizar</button></td>
+							<td><button>Excluir</button></td>
+							</tr> <tr> 
+								<td>000006</td>
+								<td>Manuela Oliveira Paula</td>
+								<td>manuela@gmail.com</td>
+								<td>$5882484555%39</td>
+								<td><button>Atualizar</button></td>
+								<td><button>Excluir</button></td>
+								</tr>
+		
+  
+	  
+	  
+   </table>
+  
+ 
 
-	
-	
- </table>
- <br>
- <a href="/Formulario.html"><button>Adicionar um novo </button></a>    
-    
+  </header>
+
+
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+        class="w3-hover-text-green">w3.css</a></p>
+    <!-- End footer -->
+  </footer>
+
+  <!-- END PAGE CONTENT -->
+  </div>
+
+  <script>
+    // Open and close sidebar
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "60%";
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
+
 </body>
+
 </html>
